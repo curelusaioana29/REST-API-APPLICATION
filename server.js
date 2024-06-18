@@ -1,5 +1,9 @@
-const app = require("./app");
+const app = require('./app');
+const connectDB = require('./db');
+const port = process.env.PORT || 8000;
 
-app.listen(3000, () => {
-  console.log("Server is running. Use our API on port: 3000");
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Server is running. Use our API on port: ${port}`);
+  });
 });
