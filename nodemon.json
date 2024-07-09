@@ -1,3 +1,6 @@
 {
-  "ignore": ["node_modules", "models/contacts.json"]
+  "watch": ["*.mjs", "routes/*.mjs", "models/*.mjs", "middleware/*.mjs"],
+  "ext": "js,mjs,json",
+  "ignore": ["node_modules/**"],
+  "exec": "node --experimental-modules server.mjs"
 }
